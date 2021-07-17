@@ -1,0 +1,9 @@
+[package]
+name = "lodust"
+version = "0.1.0"
+authors = ["Chris Liu <chrisliupascal@gmail.com>"]
+edition = "2018"
+description = "Rust version of Lodash"
+license = "MIT"
+
+[dependencies]
