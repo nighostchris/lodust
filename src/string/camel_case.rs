@@ -1,4 +1,5 @@
 #![allow(dead_code)]
+
 pub fn camel_case(s: String) -> String {
   let mut result = String::new();
   let mut is_last_special_char = false;
