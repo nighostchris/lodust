@@ -1,6 +1,6 @@
 #![allow(dead_code)]
 
-/// (String) Convert the input string into Camel-Case format.
+/// (String) Converts the input string into Camel-Case format.
 ///
 /// Note that all the special characters will be removed and only valid letters remained.
 ///
@@ -9,7 +9,14 @@
 /// ```rust
 /// use lodust::camel_case;
 ///
+/// let camel_cased = camel_case("Foo Bar".to_string());
+/// // => "fooBar"
+///
 /// let camel_cased = camel_case("--foo--bar--".to_string());
+/// // => "fooBar"
+///
+/// let camel_cased = camel_case("__FOO_BAR__".to_string());
+/// // => "fooBar"
 /// ```
 ///
 

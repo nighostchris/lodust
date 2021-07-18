@@ -13,4 +13,8 @@ include = [
   "src/**/*"
 ]
 
+[features]
+default = ["string"]
+string = []
+
 [dependencies]
