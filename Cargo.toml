@@ -1,6 +1,6 @@
 [package]
 name = "lodust"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Chris Liu <chrisliupascal@gmail.com>"]
 edition = "2018"
 description = "Rust version of Lodash"
