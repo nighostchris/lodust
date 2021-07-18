@@ -26,4 +26,13 @@ mod string_tests {
     assert_eq!(lodust::ends_with("abc".to_string(), "bc".to_string(), Some(3)), true);
     assert_eq!(lodust::ends_with("abc".to_string(), "bc".to_string(), None), true);
   }
+
+  #[test]
+  fn kebab_case_test() {
+    assert_eq!(lodust::kebab_case("Foo Bar".to_string()), "foo-bar");
+    assert_eq!(lodust::kebab_case("--foo--bar--".to_string()), "foo-bar");
+    assert_eq!(lodust::kebab_case("fooBar".to_string()), "foo-bar");
+    assert_eq!(lodust::kebab_case("__FOO_BAR__".to_string()), "foo-bar");
+    assert_eq!(lodust::kebab_case("__fOo_-BaR__".to_string()), "f-oo-ba-r");
+  }
 }
