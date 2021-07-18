@@ -8,5 +8,9 @@ documentation = "https://docs.rs/lodust"
 readme = "README.md"
 repository = "https://github.com/nighostchris/lodust/"
 license = "MIT"
+include = [
+  "Cargo.toml",
+  "src/**/*"
+]
 
 [dependencies]
