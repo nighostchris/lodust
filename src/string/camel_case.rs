@@ -1,5 +1,18 @@
 #![allow(dead_code)]
 
+/// (String) Convert the input string into Camel-Case format.
+///
+/// Note that all the special characters will be removed and only valid letters remained.
+///
+/// # Example
+///
+/// ```rust
+/// use lodust::camel_case;
+///
+/// let camel_cased = camel_case("--foo--bar--".to_string());
+/// ```
+///
+
 pub fn camel_case(s: String) -> String {
   let mut result = String::new();
   let mut is_last_special_char = false;
