@@ -1,6 +1,11 @@
 #[cfg(test)]
 mod string_tests {
   use lodust;
+  use regex::Regex;
+
+  macro_rules! string_vec {
+    ($($x:expr), *) => (vec![$($x.to_string()), *]);
+  }
 
   #[test]
   fn camel_case_test() {
@@ -34,5 +39,14 @@ mod string_tests {
     assert_eq!(lodust::kebab_case("fooBar".to_string()), "foo-bar");
     assert_eq!(lodust::kebab_case("__FOO_BAR__".to_string()), "foo-bar");
     assert_eq!(lodust::kebab_case("__fOo_-BaR__".to_string()), "f-oo-ba-r");
+  }
+
+  #[test]
+  fn words_test() {
+    assert_eq!(lodust::words("fred, barney, & pebbles".to_string(), None), string_vec!["fred", "barney", "pebbles"]);
+    assert_eq!(
+      lodust::words("fred, barney, & pebbles".to_string(), Some(Regex::new("[^, ]+").unwrap())),
+      string_vec!["fred", "barney", "&", "pebbles"],
+    );
   }
 }

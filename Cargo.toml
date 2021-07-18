@@ -18,3 +18,4 @@ default = ["string"]
 string = []
 
 [dependencies]
+regex = "1.5.4"

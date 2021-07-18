@@ -9,3 +9,6 @@ pub use ends_with::*;
 
 mod kebab_case;
 pub use kebab_case::*;
+
+mod words;
+pub use words::*;
