@@ -8,7 +8,7 @@ Depend on `lodust` in `Cargo.toml`:
 
 ```toml
 [dependencies]
-lodust = "0.1.0"
+lodust = "0.1.2"
 ```
 
 ## Functions Categorization
