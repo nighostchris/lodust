@@ -4,27 +4,25 @@ use regex::Regex;
 
 /// (String) Converts the input string into lower case format.
 ///
-/// Note that all the special characters will be removed and only valid letters remained.
-///
 /// # Example
 ///
 /// ```rust
-/// use lodust::kebab_case;
+/// use lodust::lower_case;
 ///
-/// let kebab_cased = kebab_case("Foo Bar".to_string());
+/// let kebab_cased = lower_case("Foo Bar".to_string());
 /// // => "foo bar"
 ///
-/// let kebab_cased = kebab_case("--foo--bar--".to_string());
+/// let kebab_cased = lower_case("--foo--bar--".to_string());
 /// // => "foo bar"
 ///
-/// let kebab_cased = kebab_case("__FOO_BAR__".to_string());
+/// let kebab_cased = lower_case("__FOO_BAR__".to_string());
 /// // => "foo bar"
 ///
-/// let kebab_cased = kebab_case("fooBar".to_string());
+/// let kebab_cased = lower_case("fooBar".to_string());
 /// // => "foo bar"
 ///
-/// let kebab_cased = kebab_case("__fOo_-BaR__".to_string());
-/// // => "f oo ba r"
+/// let kebab_cased = lower_case("__fOo_-BaR__".to_string());
+/// // => "foo bar"
 /// ```
 ///
 
