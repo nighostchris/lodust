@@ -12,3 +12,6 @@ pub use kebab_case::*;
 
 mod words;
 pub use words::*;
+
+mod trim;
+pub use trim::*;

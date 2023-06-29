@@ -49,4 +49,13 @@ mod string_tests {
       string_vec!["fred", "barney", "&", "pebbles"],
     );
   }
+
+  #[test]
+  fn trim_test() {
+    assert_eq!(lodust::trim("  Foo Bar  ".to_string(), " ".to_string()), "Foo Bar");
+    assert_eq!(lodust::trim("--foo--bar--".to_string(), "-".to_string()), "foo--bar");
+    assert_eq!(lodust::trim("__FOO_BAR__".to_string(), "_".to_string()), "FOO_BAR");
+    assert_eq!(lodust::trim(" __FOO_BAR__".to_string(), "_".to_string()), " __FOO_BAR");
+    assert_eq!(lodust::trim(" __FOO_BAR__ ".to_string(), " _".to_string()), "_FOO_BAR__ ");
+  }
 }
