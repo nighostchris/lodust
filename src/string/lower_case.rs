@@ -9,19 +9,19 @@ use regex::Regex;
 /// ```rust
 /// use lodust::lower_case;
 ///
-/// let kebab_cased = lower_case("Foo Bar".to_string());
+/// let lower_cased = lower_case("Foo Bar".to_string());
 /// // => "foo bar"
 ///
-/// let kebab_cased = lower_case("--foo--bar--".to_string());
+/// let lower_cased = lower_case("--foo--bar--".to_string());
 /// // => "foo bar"
 ///
-/// let kebab_cased = lower_case("__FOO_BAR__".to_string());
+/// let lower_cased = lower_case("__FOO_BAR__".to_string());
 /// // => "foo bar"
 ///
-/// let kebab_cased = lower_case("fooBar".to_string());
+/// let lower_cased = lower_case("fooBar".to_string());
 /// // => "foo bar"
 ///
-/// let kebab_cased = lower_case("__fOo_-BaR__".to_string());
+/// let lower_cased = lower_case("__fOo_-BaR__".to_string());
 /// // => "foo bar"
 /// ```
 ///
