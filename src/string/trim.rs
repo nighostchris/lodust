@@ -7,9 +7,9 @@
 /// # Example
 ///
 /// ```rust
-/// use lodust::kebab_case;
+/// use lodust::trim;
 ///
-/// let kebab_cased = kebab_case("  Foo Bar ".to_string());
+/// let trimmed = trim("  Foo Bar ".to_string(), " ".to_string());
 /// // => "Foo Bar"
 ///
 /// ```
