@@ -33,6 +33,15 @@ mod string_tests {
   }
 
   #[test]
+  fn lower_case_test() {
+    assert_eq!(lodust::lower_case("Foo Bar".to_string()), "foo bar");
+    assert_eq!(lodust::lower_case("--foo--bar--".to_string()), "foo bar");
+    assert_eq!(lodust::lower_case("fooBar".to_string()), "foobar");
+    assert_eq!(lodust::lower_case("__FOO_BAR__".to_string()), "foo bar");
+    assert_eq!(lodust::lower_case("__fOo_-BaR__".to_string()), "foo bar");
+  }
+
+  #[test]
   fn kebab_case_test() {
     assert_eq!(lodust::kebab_case("Foo Bar".to_string()), "foo-bar");
     assert_eq!(lodust::kebab_case("--foo--bar--".to_string()), "foo-bar");

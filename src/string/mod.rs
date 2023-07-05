@@ -12,3 +12,6 @@ pub use kebab_case::*;
 
 mod words;
 pub use words::*;
+
+mod lower_case;
+pub use lower_case::*;
